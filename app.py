@@ -112,4 +112,4 @@ def update_figure(selected_country):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.server.run(debug=True)
