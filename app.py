@@ -8,14 +8,13 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
 
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
+app = dash.Dash(__name__)
 
-import flask
+server = app.server
 
-server = flask.Flask(__name__)
-
-app = dash.Dash(__name__, server=server)
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
@@ -112,4 +111,4 @@ def update_figure(selected_country):
 
 
 if __name__ == '__main__':
-    app.server.run(debug=True)
+    app.run_server(debug=True)
